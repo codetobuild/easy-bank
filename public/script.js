@@ -37,7 +37,7 @@ async function transferMoney(payload) {
 
     const data = { username: 'example' };
 
-    fetch('http://localhost:3000/transfer', {
+    fetch('https://easybank-nokha.herokuapp.com/transfer', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
