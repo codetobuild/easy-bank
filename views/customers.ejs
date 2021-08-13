@@ -1,0 +1,35 @@
+<%- include('./partials/header.ejs') %> 
+
+<div class="container">
+
+	<h1 class="view_header">Customer Details</h1>
+ 
+	<table class='customer_table'>
+		 <thead class='table_header'>
+			<tr>
+				<th>Customer Name</th>
+				<th>Email</th>
+				<th>Total Credits</th>
+				<th>View User</th>
+			</tr>
+		</thead>
+		<tbody class='table_body'>
+            <% for(let user of users){ %>
+			<tr class='table_row'>
+				<td><%= user.name %></td>
+                <td><%= user.email%></td>
+                <td><%= user.credits%></td>
+        		 <td>
+					 <button class="select-btn"><a href="/view/<%= user._id %>">View</a></button>
+			</td>
+			</tr> 
+
+		 <% } %>
+			
+	</tbody>
+	
+	</table>
+</div>
+            
+
+<%- include('./partials/footer.ejs') %> 

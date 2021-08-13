@@ -1,0 +1,31 @@
+<%- include('./partials/header.ejs') %> 
+
+<div class="container" style="height:100vh;">
+
+    <h1 class="view_header">Transactions History</h1>
+     
+        <table class='customer_table'>
+             <thead class='table_header'>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Email</th>
+                    <th>Total Credits</th>
+                </tr>
+            </thead>
+            <tbody class='table_body'>
+                <% for(let ele of transaction){ %>
+                <tr class='table_row'>
+                    <td><%= ele.fromUser %></td>
+                    <td><%= ele.toUser%></td>
+                    <td><%= ele.credits%></td>
+                      
+                </tr> 
+    
+             <% } %>
+                
+        </tbody>
+        </table>
+    </div>
+          
+    
+<%- include('./partials/footer.ejs') %> 
