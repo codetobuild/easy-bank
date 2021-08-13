@@ -44,7 +44,7 @@
     line-height: 1.5;
     color: var(--color-black);
     background: var(--color-white);
-    /* height:100vh; */
+    height:100%;
   }
   
   a,
@@ -109,6 +109,7 @@
     height: auto;
     margin: 0 auto;
   }
+ 
   .navbar .burger {
     position: relative;
     display: none;
@@ -122,6 +123,7 @@
     background: none;
     transform: rotate(0deg);
     transition: 0.35s ease-in-out;
+  
   }
   .navbar .burger-line {
     display: block;
@@ -133,7 +135,9 @@
     outline: none;
     opacity: 1;
     border-radius: 0.25rem;
-    background: var(--color-black);
+    /* background: var(--color-black); */
+    background-color:var(--color-indigo);
+
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
   }
@@ -191,6 +195,7 @@
   .hero_text_second{
     text-align: center;
     font-size: 2rem;
+    color:rgb(71, 71, 71)
   }
   .bank_text{
     color: var(--color-indigo);
@@ -352,8 +357,32 @@ select:focus, input:focus{
 }
 
 .company-name{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 0.5rem;
+}
+/* profile card */
+.profile_card{
+  background-color: blue;
+  max-width: 700px;
+  width:100%;
+  padding:2rem;
+  margin:3rem auto;
+  border-radius: 10px;
+  background-color:var(--color-indigo);
+  color: white;
+}
+
+.profile_back_btn{
+  background-color: rgb(255, 187, 0);
+  width:200px;
+  padding:10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.profile_back_btn:hover{
+  box-shadow: var(--shadow-large);
+   
 }
 
 @media only screen and (max-width: 768px) {
@@ -361,6 +390,8 @@ select:focus, input:focus{
       display: block;
       opacity: 1;
       visibility: visible;
+      /* background-color:var(--color-indigo); */
+
     }
     .navbar .menu {
       width: 100%;
@@ -390,10 +421,43 @@ select:focus, input:focus{
       font-size:1.5rem;
     }
     .hero_transfer_btn{
-      
+      padding: 10px;
       width:100%;
-      
     }
+    .footer a{
+      font-size: 1.3rem;
+    }
+    .company-name{
+      font-size:1.18rem;
+    }
+    
+
+    .profile_card h1{
+    font-weight: 500;
+
+      font-size: 1.8rem;
+    }
+    
   }
 
-
+@media only screen and (max-width: 550px) {
+  .hero_text{
+    font-size:2.7rem;
+  }
+  .hero_text_second{
+    font-size:1.4rem;
+  }
+  .hero_section{
+    margin-bottom: 1rem;
+  }
+  .profile_card{
+    padding:1rem;
+  }
+  .profile_card h1{
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .profile_back_btn{
+    width:100%;
+  }
+}

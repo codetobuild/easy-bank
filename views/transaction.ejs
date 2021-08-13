@@ -15,6 +15,7 @@
             <tbody class='table_body'>
                 <% for(let ele of transaction){ %>
                 <tr class='table_row'>
+                  
                     <td><%= ele.fromUser %></td>
                     <td><%= ele.toUser%></td>
                     <td><%= ele.credits%></td>
@@ -29,3 +30,4 @@
           
     
 <%- include('./partials/footer.ejs') %> 
+

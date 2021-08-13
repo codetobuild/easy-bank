@@ -10,17 +10,21 @@ router.get('/', async(req, res) => {
     res.render('customers', {users});
 })
 
+router.get('/:id', async(req, res) => {
+    try{
+        console.log(req.baseUrl);
+        const {id} = req.params;
+        const user = await User.findById(id);
+        user.backUrl = req.baseUrl;
+        console.log(user);
+        res.render('customerDetails', {user});
+    }catch(err){
+        res.send('user not found');
+    }
+    
+})
  
 // view one customers 
-router.get('/:id', async(req, res) => {
- try{
-    const user = await User.findById({_id:req.params.id});
-    res.render('viewCustomer', {user})
- }catch(err){
-     res.send('error')
- }
-   
-})
-
+ 
 
 module.exports = router; 

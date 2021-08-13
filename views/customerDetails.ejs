@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs') %> 
+<style>
+
+</style>
+ <div class="container">
+     <div class="profile_card">
+         <h1> Name: <%= user.name%></h1>
+         <h1>Email: <%= user.email%></h1>
+         <h1>Total Credits: <%= user.credits%></h1>
+     
+    <a href="<%= user.backUrl %> ">
+        <button class="profile_back_btn">
+        Back
+    </button>
+    </a> 
+    </div>
+ </div>
+
+<%- include('./partials/footer.ejs') %> 
+ 

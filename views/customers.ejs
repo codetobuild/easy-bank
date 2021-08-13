@@ -10,18 +10,19 @@
 				<th>Customer Name</th>
 				<th>Email</th>
 				<th>Total Credits</th>
-				<th>View User</th>
+				<!-- <th>View User</th> -->
 			</tr>
 		</thead>
 		<tbody class='table_body'>
             <% for(let user of users){ %>
 			<tr class='table_row'>
-				<td><%= user.name %></td>
+					<td><a href="/view/<%= user.id %> " title="click to view customer details"><%= user.name %></a>
+					</td>
                 <td><%= user.email%></td>
                 <td><%= user.credits%></td>
-        		 <td>
+        		 <!-- <td>
 					 <button class="select-btn"><a href="/view/<%= user._id %>">View</a></button>
-			</td>
+			</td> -->
 			</tr> 
 
 		 <% } %>
