@@ -38,7 +38,7 @@ async function transferMoney(payload) {
     const data = { username: 'example' };
 
     fetch('http://localhost:3000/transfer', {
-      method: 'PUT', // or 'PUT'
+      method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
       },

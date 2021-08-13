@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     res.render('transfer', {users});
 })
 
-router.put('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const fromUser = await User.findById(req.body.from);
         const toUser= await User.findById(req.body.to);
