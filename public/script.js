@@ -74,6 +74,7 @@ transferForm.addEventListener('submit', (e)=>{
 
     if(transferPayload.from === transferPayload.to){
         alert('cannot send to same user!');
+        return;
     }                                                                 
 
     transferMoney(transferPayload);
