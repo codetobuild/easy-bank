@@ -9,8 +9,12 @@ npm install
 
 # Devendencies
 
-"dotenv"
-"ejs"
-"express"
-"method-override"
+"dotenv",
+
+"ejs",
+
+"express",
+
+"method-override",
+
 "mongoose"
