@@ -7,11 +7,14 @@ const Transaction =require('../models/transactions')
 router.get('/', async (req, res) => {
 
     const users = await User.find({});
+    console.log(req.path)
     res.render('transfer', {users});
 })
 
 router.post('/', async (req, res) => {
     try{
+        cosole.log(req.body);
+
         const fromUser = await User.findById(req.body.from);
         const toUser= await User.findById(req.body.to);
         const credit = req.body.credit;
@@ -41,6 +44,7 @@ router.post('/', async (req, res) => {
         return res.json({status: 200, msg: 'successs'});
 
     }catch(err){
+        console.log(err);
         return res.json({status: 500, msg: 'fail', error: err.message});
     }
 

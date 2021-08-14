@@ -217,6 +217,8 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: auto;
+    margin-bottom: 10rem;
+    
   }
   
   .hero_transfer_btn span {
@@ -253,10 +255,12 @@
     margin-top: 1rem;
     
   }
+
   .customer_table{
-    background-color:rgb(206, 244, 255);
+      background-color:rgb(206, 244, 255);
       width: 100%;
       border-collapse: collapse;
+      margin-bottom:10rem;
   }
   .customer_table td, .customer_table th{
       border: 1px solid #ddd;
@@ -264,10 +268,11 @@
   .table_header{
       background-color: var(--color-indigo);
       color: white;
-      font-size: 1.1rem;
   }
   .table_header th{
       padding: 1rem 0;
+      font-size: 1.1rem;
+
   }
   .table_row td{
     padding: 1rem;
@@ -291,11 +296,9 @@
     width:100%;
     border-radius: 10px;
     box-shadow: var(--shadow-large);
-    
 }
 .transferForm  div{
     margin-bottom:1.2rem;
-
 }
 
  
@@ -439,6 +442,11 @@ select:focus, input:focus{
 
       font-size: 1.8rem;
     }
+    .table_header th{
+      padding: 1rem 0;
+      font-weight: 500;
+      font-size: 1.1rem;
+  }
     
   }
 
@@ -457,9 +465,19 @@ select:focus, input:focus{
   }
   .profile_card h1{
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   .profile_back_btn{
     width:100%;
   }
+  .transferForm{
+    margin-top: 1rem;
+  }
+  .table_header th{
+    padding: 1rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
 }
+}
+
+
