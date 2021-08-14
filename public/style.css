@@ -218,7 +218,7 @@
     cursor: pointer;
     margin: auto;
     margin-bottom: 10rem;
-    
+
   }
   
   .hero_transfer_btn span {
@@ -249,6 +249,9 @@
 
 
   /* table style */
+  .table_wrapper{
+    overflow-x: scroll;
+  }
   .view_header{
     text-align: center;
     margin-bottom: 2rem;
