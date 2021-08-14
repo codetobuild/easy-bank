@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try{
-        cosole.log(req.body);
 
         const fromUser = await User.findById(req.body.from);
         const toUser= await User.findById(req.body.to);
